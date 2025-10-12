@@ -1,132 +1,248 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>My Personal Webpage</title>
-<link rel="stylesheet" href="style.css">
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    background: #f8f9fc;
-    margin: 0;
-    padding: 0;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arleczar G. Cornal - Information Systems Student</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #f8f9fc;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
 
-  /* Profile header */
-  .profile-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 20px;
-    background: linear-gradient(135deg, #9ea0c7, #6a6b9a);
-    color: white;
-    border-bottom-left-radius: 50% 20%;
-    border-bottom-right-radius: 50% 20%;
-  }
+    /* Header */
+    .profile-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 50px 20px;
+      background: linear-gradient(135deg, #888bb0, #a0a2ac);
+      color: white;
+      border-bottom-left-radius: 50% 15%;
+      border-bottom-right-radius: 50% 15%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
 
-  .profile-header img {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    border: 5px solid white;
-    object-fit: cover;
-    margin-top: 15px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
-  }
+    .profile-header img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 5px solid white;
+      object-fit: cover;
+      margin-top: 15px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    }
 
-  .profile-header h1 {
-    margin: 0;
-    font-size: 2.2em;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-  }
+    .profile-header h1 {
+      margin: 10px 0 5px 0;
+      font-size: 2.2em;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
 
-  .contact-info {
-    text-align: center;
-    margin-top: 10px;
-  }
+    .contact-info {
+      text-align: center;
+      margin-top: 10px;
+    }
 
-  .contact-info a {
-    color: #6a6b9a;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  .contact-info a:hover {
-    text-decoration: underline;
-  }
-</style>
+    .contact-info a {
+      color: #53557a;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    h2 {
+      text-align: center;
+      color: #444;
+      margin-top: 40px;
+      border-bottom: 2px solid #ccc;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    .section {
+      width: 80%;
+      margin: 30px auto;
+      background: #fff;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f3f3f3;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #777;
+      background: #f0f0f5;
+    }
+
+    @media (max-width: 768px) {
+      .section { width: 90%; }
+    }
+  </style>
 </head>
 <body>
 
-<!-- Profile header -->
-<div class="profile-header">
-  <h1>Cornal, Arleczar G.</h1>
-  <img src="82d9050f-9dc1-4f5a-9396-03872ff65dc5.jpg" alt="My Photo">
-</div>
+  <!-- Profile Header -->
+  <div class="profile-header">
+    <h1>Arleczar G. Cornal</h1>
+    <img src="82d9050f-9dc1-4f5a-9396-03872ff65dc5.jpg" alt="Profile Photo">
+    <div class="contact-info">
+      <p>Masbate City | +63 919 963 0993</p>
+      <a href="mailto:cornalarleczar@gmail.com">cornalarleczar@gmail.com</a>
+    </div>
+  </div>
 
-<!-- Contact info -->
-<div class="contact-info">
-  <p>Masbate City</p>
-  <p>+639199630993</p>
-  <a href="mailto:cornalarleczar@gmail.com">Send me an email</a>
-</div>
+  <!-- About Me -->
+  <div class="section">
+    <h2>About Me</h2>
+    <p>
+      I am a passionate and detail-oriented Information Systems student at Bicol University Polangui Campus. 
+      I specialize in combining business processes with modern technology to create efficient and user-friendly solutions. 
+      Proficient in Microsoft Office, web development, and database management, I am eager to apply my skills in a professional setting and continue growing in the IT and virtual assistance fields.
+    </p>
+  </div>
 
-<!-- The rest of your content follows... -->
-<h2><hr><center>About me</center></h2>
-<div style="text-align: center;">
-  <p>I am a detail-oriented and highly motivated information system student with a passion for virtual assistance and strong technical skills.
-  Proficient in various software applications and eager to develop my skills and knowledge for a virtual assistant role.</p>
-</div>
-
-
-  <table border="1">
-    <tr>
-        <td><b>Educational Background</b></td>
-        <td><b>Skills and Competencies</b></td>
-    </tr>
-    <tr>
+  <!-- Education and Skills -->
+  <div class="section">
+    <h2>Education & Skills</h2>
+    <table>
+      <tr>
+        <th>Educational Background</th>
+        <th>Skills & Competencies</th>
+      </tr>
+      <tr>
         <td>
-            <ul>
-             <li>Highschool:DNHS</li>
-             <li>College:BU Polangui</li>
-            </ul>
+          <ul>
+            <li><b>College:</b> Bicol University Polangui Campus – BS Information Systems</li>
+            <li><b>High School:</b> DNHS</li>
+          </ul>
         </td>
         <td>
-            <ul>
-             <li>Microsoft Office</li>
-             <li>HTML</li>
-             <li>CSS</li>
-             <li>JavaScript</li>
-            </ul>
+          <ul>
+            <li>Microsoft Office (Word, Excel, PowerPoint)</li>
+            <li>HTML, CSS, JavaScript</li>
+            <li>Database Design (MySQL, SQL)</li>
+            <li>Basic Graphic Design (Canva)</li>
+          </ul>
         </td>
-    </tr>
-</table>
-<h2 style="text-align: center; margin-top: 40px;">Skills</h2>
- 
-    <table border="1" style="width: 50%;">
-      
-      <td><b>Soft Skills</b></td>
-    <td>
-      <ul>
-        <li>Database management</li>
-        <li>Public Speaking</li>
-        <li>Teamwork</li>
-      </ul>
-    </td>
-  </tr>
-</table>
+      </tr>
+    </table>
+  </div>
 
-<table border="1" style="width: 50%;">
-      
-      <td><b>technical Skills</b></td>
-    <td>
-      <ul>
-        <li>Database management: SQL</li>
-        <li>Public Speaking</li>
-        <li>web development: html</li>
-      </ul>
-    </td>
-  </tr>
-</table>
+  <!-- Skills -->
+  <div class="section">
+    <h2>Professional Skills</h2>
+    <table>
+      <tr>
+        <th>Soft Skills</th>
+        <td>
+          <ul>
+            <li>Teamwork & Collaboration</li>
+            <li>Public Speaking</li>
+            <li>Adaptability</li>
+            <li>Time Management</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <th>Technical Skills</th>
+        <td>
+          <ul>
+            <li>Web Development (HTML, CSS, JS)</li>
+            <li>Database Management (SQL, MySQL)</li>
+            <li>System Analysis & Design</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <th>Transferable Skills</th>
+        <td>
+          <ul>
+            <li>Strong Communication Skills</li>
+            <li>Problem-Solving and Critical Thinking</li>
+            <li>Customer Service Orientation</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </div>
 
+  <!-- Work Experience -->
+  <div class="section">
+    <h2>Work Experience</h2>
+    <p>
+      <b>Academic Projects – Information Systems Student</b><br>
+      Developed and maintained small-scale web and database systems as part of academic projects. 
+      Conducted system analysis and design, including user interviews, data flow diagrams, and documentation. 
+      Collaborated in team-based projects applying SDLC and Agile methodologies. 
+      Utilized tools such as MySQL, Visual Studio Code, and Canva to design and present system prototypes.
+    </p>
+  </div>
 
-</form>
+  <!-- Projects -->
+  <div class="section">
+    <h2>Projects</h2>
+    <p><b>Inventory Management System (Capstone Project)</b><br>
+    Designed and implemented a web-based inventory system using PHP and MySQL to help automate stock management for a small business.</p>
+
+    <p><b>Student Information Portal</b><br>
+    Developed a simple database-driven platform for managing student records and profiles as part of a group academic project.</p>
+  </div>
+
+  <!-- Certifications -->
+  <div class="section">
+    <h2>Certifications</h2>
+    <ul style="list-style-type:none; text-align:center; padding:0;">
+      <li>Microsoft Office Specialist (Word, Excel, PowerPoint)</li>
+      <li>Google Digital Garage – Fundamentals of Digital Marketing</li>
+      <li>Cisco Networking Academy – Introduction to Cybersecurity</li>
+      <li>Oracle Academy – Database Foundations</li>
+      <li>Coursera – Introduction to Data Analytics (IBM)</li>
+      <li>AWS Academy Cloud Foundations</li>
+      <li>TESDA – Computer Systems Servicing NC II</li>
+      <li>LinkedIn Learning – Project Management Foundations</li>
+    </ul>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Arleczar G. Cornal | Information Systems Student | Bicol University Polangui Campus
+  </footer>
+
+</body>
+</html>
