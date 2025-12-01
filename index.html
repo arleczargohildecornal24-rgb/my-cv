@@ -6,112 +6,159 @@
   <title>Arleczar G. Cornal - Information Systems Student</title>
   <style>
     body {
-      font-family: "Segoe UI", Arial, sans-serif;
-      background: #f8f9fc;
+      font-family: "Poppins", Arial, sans-serif;
+      background: #f3f4f9;
       margin: 0;
       padding: 0;
       color: #333;
     }
 
+    /* Floating geometric shapes */
+    .bg-shapes div {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.15;
+      animation: float 6s infinite ease-in-out;
+    }
+
+    .circle1 { width: 180px; height: 180px; background:#8b8fbf; top: 5%; left: 5%; }
+    .circle2 { width: 250px; height: 250px; background:#b6b8d6; bottom: 10%; right: 8%; animation-delay: 2s; }
+    .circle3 { width: 120px; height: 120px; background:#9da0c8; top: 40%; right: 20%; animation-delay: 4s; }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0); }
+    }
+
     /* Header */
     .profile-header {
+      position: relative;
+      z-index: 2;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 50px 20px;
-      background: linear-gradient(135deg, #888bb0, #a0a2ac);
+      padding: 70px 20px;
+      background: linear-gradient(135deg, #6e70c7, #9fa2e8);
       color: white;
-      border-bottom-left-radius: 50% 15%;
-      border-bottom-right-radius: 50% 15%;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      border-bottom-left-radius: 50% 22%;
+      border-bottom-right-radius: 50% 22%;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+      letter-spacing: 0.5px;
     }
 
     .profile-header img {
-      width: 160px;
-      height: 160px;
+      width: 170px;
+      height: 170px;
       border-radius: 50%;
-      border: 5px solid white;
+      border: 6px solid white;
       object-fit: cover;
-      margin-top: 15px;
-      box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+      margin-top: 20px;
+      box-shadow: 0px 6px 18px rgba(0,0,0,0.3);
+      transition: 0.3s ease;
+    }
+
+    .profile-header img:hover {
+      transform: scale(1.05);
     }
 
     .profile-header h1 {
-      margin: 10px 0 5px 0;
-      font-size: 2.2em;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      margin: 15px 0 8px 0;
+      font-size: 2.6em;
+      letter-spacing: 1.5px;
+      text-shadow: 3px 3px 8px rgba(0,0,0,0.35);
     }
 
     .contact-info {
       text-align: center;
       margin-top: 10px;
-    }
-
-    .contact-info a {
-      color: #53557a;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .contact-info a:hover {
-      text-decoration: underline;
+      background: rgba(255,255,255,0.15);
+      padding: 12px 24px;
+      border-radius: 12px;
+      backdrop-filter: blur(8px);
+      font-weight: 500;
     }
 
     h2 {
       text-align: center;
-      color: #444;
+      color: #4a4a66;
       margin-top: 40px;
-      border-bottom: 2px solid #ccc;
+      border-bottom: 3px solid #a0a3c2;
       display: inline-block;
-      padding-bottom: 5px;
+      padding-bottom: 8px;
+      font-size: 1.9em;
+      letter-spacing: 1px;
     }
 
     p {
-      line-height: 1.6;
+      line-height: 1.8;
+      font-size: 1.05em;
     }
 
     .section {
-      width: 80%;
-      margin: 30px auto;
-      background: #fff;
-      border-radius: 10px;
-      padding: 25px;
-      box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
+      width: 83%;
+      margin: 40px auto;
+      background: white;
+      border-radius: 18px;
+      padding: 35px;
+      box-shadow: 0px 8px 25px rgba(0,0,0,0.08);
+      transition: 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background: linear-gradient(90deg,#7b7ed1,#a6a9ec);
+    }
+
+    .section:hover {
+      transform: translateY(-4px);
+      box-shadow: 0px 12px 30px rgba(0,0,0,0.12);
     }
 
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 15px;
+      margin-top: 20px;
+      font-size: 1.05em;
     }
 
-    th, td {
-      padding: 12px 15px;
-      text-align: left;
-      vertical-align: top;
+    th {
+      background: #e7e7f5;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    td {
+      padding: 15px;
     }
 
     tr:nth-child(even) {
-      background-color: #f3f3f3;
-    }
-
-    ul {
-      margin: 0;
-      padding-left: 20px;
+      background-color: #f6f6fc;
     }
 
     footer {
       text-align: center;
-      margin-top: 50px;
-      padding: 20px;
-      font-size: 0.9em;
-      color: #777;
-      background: #f0f0f5;
+      margin-top: 60px;
+      padding: 28px;
+      background: #d7d8eb;
+      letter-spacing: 0.6px;
+      font-size: 0.95em;
     }
 
+    /* Background shapes container */
+    .bg-shapes { position: fixed; inset: 0; z-index: 1; overflow: hidden; }
+
     @media (max-width: 768px) {
-      .section { width: 90%; }
+      .section { width: 92%; }
+      .profile-header h1 { font-size: 2.1em; }
     }
   </style>
 </head>
@@ -149,7 +196,7 @@
         <td>
           <ul>
             <li><b>College:</b> Bicol University Polangui Campus – BS Information Systems</li>
-            <li><b>High School:</b> Daraga Nationa Highschool</li>
+            <li><b>High School:</b> Daraga National High School</li>
           </ul>
         </td>
         <td>
@@ -210,7 +257,7 @@
       Developed and maintained small-scale web and database systems as part of academic projects. 
       Conducted system analysis and design, including user interviews, data flow diagrams, and documentation. 
       Collaborated in team-based projects applying SDLC and Agile methodologies. 
-      Utilized tools such as MySQL, Visual Studio Code, Canva and figma to design and present system prototypes.
+      Utilized tools such as MySQL, Visual Studio Code, Canva and Figma to design and present system prototypes.
     </p>
   </div>
 
