@@ -1,295 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arleczar G. Cornal - Information Systems Student</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arleczar G. Cornal - Creative CV</title>
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
   <style>
+    :root {
+      --primary: #6d72c3;
+      --secondary: #a3a6e8;
+      --bg: #f5f6ff;
+      --card-bg: #ffffff;
+      --text-dark: #333;
+    }
+
     body {
-      font-family: "Poppins", Arial, sans-serif;
-      background: #f3f4f9;
+      font-family: "Poppins", sans-serif;
+      background: var(--bg);
       margin: 0;
       padding: 0;
-      color: #333;
+      color: var(--text-dark);
     }
 
-    /* Floating geometric shapes */
-    .bg-shapes div {
-      position: absolute;
-      border-radius: 50%;
-      opacity: 0.15;
-      animation: float 6s infinite ease-in-out;
+    /* MODERN SIDEBAR LAYOUT */
+    .container {
+      display: flex;
+      min-height: 100vh;
     }
 
-    .circle1 { width: 180px; height: 180px; background:#8b8fbf; top: 5%; left: 5%; }
-    .circle2 { width: 250px; height: 250px; background:#b6b8d6; bottom: 10%; right: 8%; animation-delay: 2s; }
-    .circle3 { width: 120px; height: 120px; background:#9da0c8; top: 40%; right: 20%; animation-delay: 4s; }
-
-    @keyframes float {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-20px); }
-      100% { transform: translateY(0); }
-    }
-
-    /* Header */
-    .profile-header {
-      position: relative;
-      z-index: 2;
+    .sidebar {
+      width: 330px;
+      background: linear-gradient(180deg, var(--primary), var(--secondary));
+      padding: 40px 30px;
+      color: white;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      padding: 70px 20px;
-      background: linear-gradient(135deg, #6e70c7, #9fa2e8);
-      color: white;
-      border-bottom-left-radius: 50% 22%;
-      border-bottom-right-radius: 50% 22%;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.25);
-      letter-spacing: 0.5px;
+      box-shadow: 4px 0 20px rgba(0, 0, 0, 0.2);
     }
 
-    .profile-header img {
-      width: 170px;
-      height: 170px;
+    .sidebar img {
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
-      border: 6px solid white;
+      border: 5px solid rgba(255, 255, 255, 0.7);
       object-fit: cover;
-      margin-top: 20px;
-      box-shadow: 0px 6px 18px rgba(0,0,0,0.3);
-      transition: 0.3s ease;
+      box-shadow: 0 0 18px rgba(0,0,0,0.25);
     }
 
-    .profile-header img:hover {
-      transform: scale(1.05);
-    }
-
-    .profile-header h1 {
-      margin: 15px 0 8px 0;
-      font-size: 2.6em;
-      letter-spacing: 1.5px;
-      text-shadow: 3px 3px 8px rgba(0,0,0,0.35);
-    }
-
-    .contact-info {
-      text-align: center;
-      margin-top: 10px;
-      background: rgba(255,255,255,0.15);
-      padding: 12px 24px;
-      border-radius: 12px;
-      backdrop-filter: blur(8px);
-      font-weight: 500;
-    }
-
-    h2 {
-      text-align: center;
-      color: #4a4a66;
-      margin-top: 40px;
-      border-bottom: 3px solid #a0a3c2;
-      display: inline-block;
-      padding-bottom: 8px;
+    .sidebar h1 {
       font-size: 1.9em;
+      text-align: center;
+      margin-top: 18px;
       letter-spacing: 1px;
     }
 
-    p {
-      line-height: 1.8;
-      font-size: 1.05em;
+    .sidebar .info {
+      margin-top: 10px;
+      text-align: center;
+      opacity: 0.9;
+      font-size: 0.95em;
+    }
+
+    /* MAIN CONTENT */
+    .main {
+      flex: 1;
+      padding: 50px 70px;
     }
 
     .section {
-      width: 83%;
-      margin: 40px auto;
-      background: white;
+      background: var(--card-bg);
+      padding: 30px 35px;
       border-radius: 18px;
-      padding: 35px;
-      box-shadow: 0px 8px 25px rgba(0,0,0,0.08);
-      transition: 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .section::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 6px;
-      background: linear-gradient(90deg,#7b7ed1,#a6a9ec);
+      margin-bottom: 35px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      border-left: 6px solid var(--primary);
+      transition: 0.3s;
     }
 
     .section:hover {
-      transform: translateY(-4px);
-      box-shadow: 0px 12px 30px rgba(0,0,0,0.12);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    }
+
+    .section h2 {
+      margin: 0 0 15px 0;
+      color: var(--primary);
+      font-size: 1.7em;
+      letter-spacing: 1px;
+    }
+
+    ul {
+      margin: 10px 0;
+      padding-left: 20px;
+      line-height: 1.8;
     }
 
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 20px;
-      font-size: 1.05em;
     }
 
-    th {
-      background: #e7e7f5;
-      padding: 15px;
-      border-radius: 8px;
-    }
-
-    td {
-      padding: 15px;
-    }
-
-    tr:nth-child(even) {
-      background-color: #f6f6fc;
+    table td {
+      padding: 10px 0;
+      vertical-align: top;
     }
 
     footer {
       text-align: center;
-      margin-top: 60px;
-      padding: 28px;
-      background: #d7d8eb;
-      letter-spacing: 0.6px;
-      font-size: 0.95em;
+      padding: 25px;
+      background: var(--secondary);
+      color: white;
+      font-weight: 500;
+      letter-spacing: 0.7px;
+      margin-top: 40px;
     }
 
-    /* Background shapes container */
-    .bg-shapes { position: fixed; inset: 0; z-index: 1; overflow: hidden; }
-
-    @media (max-width: 768px) {
-      .section { width: 92%; }
-      .profile-header h1 { font-size: 2.1em; }
+    @media (max-width: 900px) {
+      .container { flex-direction: column; }
+      .sidebar { width: 100%; }
+      .main { padding: 30px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Profile Header -->
-  <div class="profile-header">
+<div class="container">
+
+  <!-- SIDEBAR SECTION -->
+  <div class="sidebar">
+    <img src="82d9050f-9dc1-4f5a-9396-03872ff65dc5.jpg" alt="Profile Photo" />
     <h1>Arleczar G. Cornal</h1>
-    <img src="82d9050f-9dc1-4f5a-9396-03872ff65dc5.jpg" alt="Profile Photo">
-    <div class="contact-info">
-      <p>Masbate City | +63 919 963 0993</p>
-      <a href="mailto:cornalarleczar@gmail.com">cornalarleczar@gmail.com</a>
+
+    <div class="info">
+      <p>Masbate City</p>
+      <p>+63 919 963 0993</p>
+      <p><a href="mailto:cornalarleczar@gmail.com" style="color:white;">cornalarleczar@gmail.com</a></p>
     </div>
   </div>
 
-  <!-- About Me -->
-  <div class="section">
-    <h2>About Me</h2>
-    <p>
-      I am a passionate and detail-oriented Information Systems student at Bicol University Polangui Campus. 
-      I specialize in combining business processes with modern technology to create efficient and user-friendly solutions. 
-      Proficient in Microsoft Office, web development, and database management, I am eager to apply my skills in a professional setting and continue growing in the IT and virtual assistance fields.
-    </p>
+  <!-- MAIN CONTENT -->
+  <div class="main">
+
+    <div class="section">
+      <h2>About Me</h2>
+      <p>
+        I am a passionate and detail-oriented Information Systems student at Bicol University Polangui Campus.
+        I specialize in combining business processes with modern technology to create efficient, user-friendly solutions.
+        Skilled in Microsoft Office, web development, and database management, I aim to grow further in IT and virtual assistance roles.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Education & Skills</h2>
+      <table>
+        <tr>
+          <td><b>College:</b> Bicol University Polangui Campus – BS Information Systems</td>
+          <td><b>Skills:</b>
+            <ul>
+              <li>Microsoft Office</li>
+              <li>HTML, CSS, JavaScript</li>
+              <li>Database Design (MySQL, SQL)</li>
+              <li>Basic Graphic Design (Canva)</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><b>High School:</b> Daraga National High School</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="section">
+      <h2>Professional Skills</h2>
+      <ul>
+        <li><b>Soft Skills:</b> Teamwork, Public Speaking, Adaptability, Time Management</li>
+        <li><b>Technical Skills:</b> Web Development, SQL/MySQL, System Analysis & Design</li>
+        <li><b>Transferable Skills:</b> Communication, Problem-Solving, Customer Service</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Work Experience</h2>
+      <p>
+        <b>Academic Projects – Information Systems Student</b><br />
+        Developed web and database systems, applied SDLC/Agile methodologies, created prototypes using MySQL,
+        VS Code, Canva, and Figma.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Projects</h2>
+      <p><b>Handicrafts System:</b><br />
+        "More than just an object — a preservation of tradition, sustainable livelihood, and storytelling through craftsmanship."
+      </p>
+      <p><b>Study Buddy:</b><br />A matching system for students looking for subject-specific study partners.</p>
+    </div>
+
+    <div class="section">
+      <h2>Certifications</h2>
+      <ul>
+        <li>Microsoft Office Specialist</li>
+        <li>Google Digital Garage – Digital Marketing</li>
+        <li>Cisco – Introduction to Cybersecurity</li>
+        <li>Oracle – Database Foundations</li>
+        <li>Coursera – Intro to Data Analytics</li>
+        <li>AWS Cloud Foundations</li>
+        <li>TESDA – CSS NC II</li>
+        <li>Project Management Foundations</li>
+      </ul>
+    </div>
+
   </div>
+</div>
 
-  <!-- Education and Skills -->
-  <div class="section">
-    <h2>Education & Skills</h2>
-    <table>
-      <tr>
-        <th>Educational Background</th>
-        <th>Skills & Competencies</th>
-      </tr>
-      <tr>
-        <td>
-          <ul>
-            <li><b>College:</b> Bicol University Polangui Campus – BS Information Systems</li>
-            <li><b>High School:</b> Daraga National High School</li>
-          </ul>
-        </td>
-        <td>
-          <ul>
-            <li>Microsoft Office (Word, Excel, PowerPoint)</li>
-            <li>HTML, CSS, JavaScript</li>
-            <li>Database Design (MySQL, SQL)</li>
-            <li>Basic Graphic Design (Canva)</li>
-          </ul>
-        </td>
-      </tr>
-    </table>
-  </div>
-
-  <!-- Skills -->
-  <div class="section">
-    <h2>Professional Skills</h2>
-    <table>
-      <tr>
-        <th>Soft Skills</th>
-        <td>
-          <ul>
-            <li>Teamwork & Collaboration</li>
-            <li>Public Speaking</li>
-            <li>Adaptability</li>
-            <li>Time Management</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <th>Technical Skills</th>
-        <td>
-          <ul>
-            <li>Web Development (HTML, CSS, JS)</li>
-            <li>Database Management (SQL, MySQL)</li>
-            <li>System Analysis & Design</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <th>Transferable Skills</th>
-        <td>
-          <ul>
-            <li>Strong Communication Skills</li>
-            <li>Problem-Solving and Critical Thinking</li>
-            <li>Customer Service Orientation</li>
-          </ul>
-        </td>
-      </tr>
-    </table>
-  </div>
-
-  <!-- Work Experience -->
-  <div class="section">
-    <h2>Work Experience</h2>
-    <p>
-      <b>Academic Projects – Information Systems Student</b><br>
-      Developed and maintained small-scale web and database systems as part of academic projects. 
-      Conducted system analysis and design, including user interviews, data flow diagrams, and documentation. 
-      Collaborated in team-based projects applying SDLC and Agile methodologies. 
-      Utilized tools such as MySQL, Visual Studio Code, Canva and Figma to design and present system prototypes.
-    </p>
-  </div>
-
-  <!-- Projects -->
-  <div class="section">
-    <h2>Projects</h2>
-    <p><b>Handicrafts System</b><br>
-   "More than just an object. Our handicraft system is the preservation of tradition, providing sustainable livelihoods and sharing stories from the hands of our artisans. Why? Because every piece matters."</p>
-
-    <p><b>Study Buddy</b><br>
-    This is where they can find their buddy and specify which subject they want to study together.</p>
-  </div>
-
-  <!-- Certifications -->
-  <div class="section">
-    <h2>Certifications</h2>
-    <ul style="list-style-type:none; text-align:center; padding:0;">
-      <li>Microsoft Office Specialist (Word, Excel, PowerPoint)</li>
-      <li>Google Digital Garage – Fundamentals of Digital Marketing</li>
-      <li>Cisco Networking Academy – Introduction to Cybersecurity</li>
-      <li>Oracle Academy – Database Foundations</li>
-      <li>Coursera – Introduction to Data Analytics (IBM)</li>
-      <li>AWS Academy Cloud Foundations</li>
-      <li>TESDA – Computer Systems Servicing NC II</li>
-      <li>LinkedIn Learning – Project Management Foundations</li>
-    </ul>
-  </div>
-
-  <!-- Footer -->
-  <footer>
-    © 2025 Arleczar G. Cornal | Information Systems Student | Bicol University Polangui Campus
-  </footer>
+<footer>
+  © 2025 Arleczar G. Cornal — Information Systems Student
+</footer>
 
 </body>
 </html>
